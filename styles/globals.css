@@ -1,9 +1,10 @@
+@import url('https://fonts.font.im/css?family=Montserrat');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -13,4 +14,56 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+
+span {
+  font-size: 0.8rem;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  font-size: 0.6rem;
+  text-align: center;
+  border-top: 1px solid #eaeaea;
+}
+
+.mainTime {
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.container {
+  padding: 0;
+}
+
+/* Box */
+.box {
+  margin: 5px;
+  padding: 10px;
+  background-color: #eaeaea;
+  /* border: 1px solid red; */
+}
+
+.red {
+  color: red;
+}
+
+.boxDone {
+  padding: 10px;
+  background-color: rgb(255, 210, 210);
+}
+
+.boxComplete {
+  padding: 10px;
+  background-color: rgb(198, 237, 255);
 }
