@@ -11,33 +11,29 @@ export default function Newclock(props) {
   const title = props.title
 
   useEffect(() => {
+    const now = new Date();
     const target = new Date(props.newDate);
+    const diff = target.getTime() - now.getTime()
 
-    const interval = setInterval(() => {
-      const now = new Date();
-      const diff = target.getTime() - now.getTime()
+    // Begin Count Down
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    setRemainDays(d);
 
-      // Begin Count Down
-      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-      setRemainDays(d);
+    const h = Math.floor(
+      (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    setRemainHours(h.toLocaleString(h, { minimumIntegerDigits: 2 }));
 
-      const h = Math.floor(
-        (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      setRemainHours(h.toLocaleString(h, { minimumIntegerDigits: 2 }));
+    const m = Math.floor(
+      (diff % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    setRemainMinutes(m.toLocaleString(m, { minimumIntegerDigits: 2 }));
 
-      const m = Math.floor(
-        (diff % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      setRemainMinutes(m.toLocaleString(m, { minimumIntegerDigits: 2 }));
+    const s = Math.floor(
+      (diff % (1000 * 60)) / 1000
+    );
+    setRemainSeconds(s.toLocaleString(s, { minimumIntegerDigits: 2 }));
 
-      const s = Math.floor(
-        (diff % (1000 * 60)) / 1000
-      );
-      setRemainSeconds(s.toLocaleString(s, { minimumIntegerDigits: 2 }));
-
-    }, 1000);
-    return () => clearInterval(interval)
   })
 
     return (
