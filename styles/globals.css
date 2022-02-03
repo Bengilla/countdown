@@ -1,10 +1,10 @@
-@import url('https://fonts.font.im/css?family=Montserrat');
+@import url("https://fonts.font.im/css?family=Montserrat");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -16,8 +16,13 @@ a {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, span {
-  width: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
   margin: 0;
   text-align: center;
   /* border: 1px solid red; */
@@ -47,23 +52,25 @@ footer {
 }
 
 /* Box */
-.box {
-  margin: 5px;
-  padding: 10px;
-  background-color: #eaeaea;
-  /* border: 1px solid red; */
-}
-
-.red {
+.fontRed {
   color: red;
 }
 
-.boxDone {
+.box {
+  margin: 5px;
   padding: 10px;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+
+.boxBegin {
+  background-color: #eaeaea;
+}
+
+.boxOneDay {
   background-color: rgb(255, 210, 210);
 }
 
 .boxComplete {
-  padding: 10px;
   background-color: rgb(198, 237, 255);
 }
