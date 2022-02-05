@@ -27,10 +27,9 @@ export default function Home({ countdowns }) {
   return (
     <div className={'container'}>
 
-      <div className='drop'>hello</div>
-
       <div className='mainTime'>
-        <h2>{currentDay}, {monthDict[currentMonth]} {currentYear}</h2>
+      <h2>{currentYear} 中国假期</h2>
+        <h5>{currentDay}, {monthDict[currentMonth]} {currentYear}</h5>
       </div>
       {countdowns.map(count => (
         <NewClock title={count.title} newDate={count.month + ', ' + count.day + ' ' + count.year + ' ' + count.time} />
