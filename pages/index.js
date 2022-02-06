@@ -25,17 +25,16 @@ export default function Home({ countdowns }) {
   });
 
   return (
-    <div className={'container'}>
-
-      <div className='mainTime'>
-      <h2>{currentYear} 中国假期</h2>
-        <h5>{currentDay}, {monthDict[currentMonth]} {currentYear}</h5>
-      </div>
-      {countdowns.map(count => (
-        <NewClock title={count.title} newDate={count.month + ', ' + count.day + ' ' + count.year + ' ' + count.time} />
-      ))}
-
-    </div>
+      <>
+        <div className='py-3 divide-y-2 divide-slate-400 text-center'>
+          <h2 className='text-3xl font-bold'>{currentYear} 中国假期</h2>
+          <h5>{currentDay}, {monthDict[currentMonth]} {currentYear}</h5>
+        </div>
+        {countdowns.map(count => (
+          <NewClock title={count.title} newDate={count.month + ', ' + count.day + ' ' + count.year + ' ' + count.time} />
+        ))}
+          {/* <NewClock title="Hello" newDate="Februaddsry, 7 2022 22:15" /> */}
+      </>
   )
 }
 
